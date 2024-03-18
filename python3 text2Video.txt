@@ -1,0 +1,19 @@
+python3 text2Video.py 
+
+Cannot initialize model with low cpu memory usage because `accelerate` was not found in the environment. Defaulting to `low_cpu_mem_usage=False`. 
+It is strongly recommended to install `accelerate` for faster and less memory-intense model loading. You can do so with: 
+```
+pip install accelerate
+```
+.
+Loading pipeline components...:   0%|                                                                                    | 0/5 [00:00<?, ?it/s]2024-02-10 13:11:30.339717: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-02-10 13:11:30.339757: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-02-10 13:11:30.340481: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-02-10 13:11:30.905088: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Loading pipeline components...: 100%|████████████████████████████████████████████████████████████████████████████| 5/5 [00:09<00:00,  1.88s/it]
+Traceback (most recent call last):
+  File "/home/gribble/huggingFace/text2Video.py", line 7, in <module>
+    pipe.enable_model_cpu_offload()
+  File "/home/gribble/.local/lib/python3.10/site-packages/diffusers/pipelines/pipeline_utils.py", line 1432, in enable_model_cpu_offload
+    raise ImportError("`enable_model_cpu_offload` requires `accelerate v0.17.0` or higher.")
+ImportError: `enable_model_cpu_offload` requires `accelerate v0.17.0` or higher.
